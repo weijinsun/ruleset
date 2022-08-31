@@ -31,12 +31,16 @@ jobs:
           git config --local user.email "weijinsun@gmail.com"
           git config --local user.name "svj"
           git remote set-url origin https://github.com/weijinsun/forclash.git
+          git pull --rebase
 
       - uses: weijinsun/forclash@main
 
-      - name: Auto green
+      - name: list
         run: |
-          git pull --rebase
+          ls -la
+
+      - name: push
+        run: |
           git add .
           git commit --allow-empty -m "~~~"
           git push
