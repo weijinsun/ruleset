@@ -28,9 +28,14 @@ jobs:
       - name: Run a one-line script
         run: |
           git --version
+          echo ----
           pwd
           ls -l
           cd ..
+          echo ----
+          pwd
           ls -l
           cd ..
+          echo ----
+          pwd
           ls -l
