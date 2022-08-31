@@ -25,22 +25,17 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Auto green
+      - name: clone
         # git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         run: |
           git config --local user.email "weijinsun@gmail.com"
           git config --local user.name "svj"
           git remote set-url origin https://github.com/weijinsun/forclash.git
+
+      - uses: weijinsun/forclash@main
+
+      - name: Auto green
+        run: |
           git pull --rebase
           git commit --allow-empty -m "~~~"
           git push
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: weijinsun/forclash@main
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          ls -la
-          echo '-----------'
-          cd /home/runner/work/_actions/weijinsun/forclash/main
-          ls -la
-          cd ..
