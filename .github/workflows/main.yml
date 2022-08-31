@@ -39,7 +39,12 @@ jobs:
           echo ----
           pwd
           ls -la
+          cd _temp
+          echo ----
+          pwd
+          ls -la
           cd ..
+          cd _actions
           echo ----
           pwd
           ls -la
