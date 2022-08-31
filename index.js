@@ -9,7 +9,7 @@ axios.get("https://raw.githubusercontent.com/weijinsun/code/master/qx/rewrite_ad
         console.log(data)
     })
 
-fs.writeFile('/home/runner/work/_actions/weijinsun/forclash/main/test.txt', "dddddddddddddd", {flag: 'a'}, (err) => {
+fs.writeFile('test.txt', "dddddddddddddd", {flag: 'a'}, (err) => {
     if (err) {
         console.error(err)
     }
