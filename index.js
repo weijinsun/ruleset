@@ -2,7 +2,7 @@ const axios = require("axios");
 const github = require('@actions/github');
 const core = require('@actions/core');
 
-
+const fs = require('fs')
 
 axios.get("https://raw.githubusercontent.com/weijinsun/code/master/qx/rewrite_ad.list" )
     .then(data=>{
@@ -10,9 +10,9 @@ axios.get("https://raw.githubusercontent.com/weijinsun/code/master/qx/rewrite_ad
         console.log(data)
     })
 
-var fso, f, s ;
-fso = new ActiveXObject("Scripting.FileSystemObject");
-f = fso.OpenTextFile("111.txt",8,true);
-f.WriteLine("dddddddddddddddddffffffffffffffff");
-f.Close();
+fs.writeFile('test.txt', "dddddddddddddd", {flag: 'a'}, (err) => {
+    if (err) {
+        console.error(err)
+    }
+})
 
