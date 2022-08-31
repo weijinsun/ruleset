@@ -26,4 +26,6 @@ jobs:
       - uses: weijinsun/forclash@main
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: git --version
+        run: |
+          git --version
+          pwd
