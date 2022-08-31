@@ -30,12 +30,16 @@ jobs:
           git --version
           echo ----
           pwd
-          ls -l
+          ls -la
           cd ..
           echo ----
           pwd
-          ls -l
+          ls -la
           cd ..
           echo ----
           pwd
-          ls -l
+          ls -la
+          cd ..
+          echo ----
+          pwd
+          ls -la
