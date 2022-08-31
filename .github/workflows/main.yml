@@ -29,4 +29,8 @@ jobs:
         run: |
           git --version
           pwd
-          ls /home/runner/work/forclash
+          ls -l
+          cd ..
+          ls -l
+          cd ..
+          ls -l
