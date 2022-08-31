@@ -43,7 +43,7 @@ jobs:
           echo ----
           pwd
           ls -la
-          cd weijinsun
+          cd weijinsun/forclash
           echo ----
           pwd
           ls -la
