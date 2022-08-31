@@ -31,3 +31,6 @@ jobs:
           echo '-----------'
           cd /home/runner/work/_actions/weijinsun/forclash/main
           ls -la
+          git add .
+          git commit -m '--'
+          git push
