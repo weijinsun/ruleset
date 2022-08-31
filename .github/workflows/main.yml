@@ -37,5 +37,6 @@ jobs:
       - name: Auto green
         run: |
           git pull --rebase
+          git add .
           git commit --allow-empty -m "~~~"
           git push
