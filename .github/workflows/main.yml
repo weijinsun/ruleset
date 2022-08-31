@@ -39,12 +39,11 @@ jobs:
           echo ----
           pwd
           ls -la
-          cd _temp
+          cd _actions
           echo ----
           pwd
           ls -la
-          cd ..
-          cd _actions
+          cd weijinsun
           echo ----
           pwd
           ls -la
