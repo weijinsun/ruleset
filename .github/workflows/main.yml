@@ -32,7 +32,7 @@ jobs:
           git config --local user.name "svj"
           git remote set-url origin https://github.com/weijinsun/forclash.git
           git pull --rebase
-          git commit --allow-empty -m ""
+          git commit --allow-empty -m "~~~"
           git push
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: weijinsun/forclash@main
