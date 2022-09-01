@@ -210,14 +210,6 @@ dns:
 
 
 proxy-providers:
-  mojie-all:
-    type: HTTP
-    interval: 600
-    url: https://mojie.nl/api/v1/client/subscribe?token=c12da864507d67f00aa9532f9eae159e
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
   AmyTelecom-p:
     type: HTTP
     interval: 600
@@ -229,19 +221,10 @@ proxy-providers:
       interval: 600
 
 proxy-groups:
-  - name: "AmyTelecom"
+  - name: "Proxy"
     type: select
     use:
       - AmyTelecom-p
-  - name: "mojie"
-    type: select
-    use:
-      - mojie-p
-  - name: "Proxy"
-    type: select
-    proxies:
-      - AmyTelecom
-      - mojie
   - name: "Apple"
     type: select
     proxies:
