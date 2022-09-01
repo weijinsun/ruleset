@@ -222,7 +222,7 @@ proxy-providers:
     type: HTTP
     interval: 600
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
-    filter: HK|US
+    filter: 香港|日本
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
