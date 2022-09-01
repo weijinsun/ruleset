@@ -211,7 +211,7 @@ dns:
 
 proxy-providers:
   mojie-p:
-    type: HTTP
+    type: http
     interval: 600
     url: https://mojie.link/api/v1/client/subscribe?token=c12da864507d67f00aa9532f9eae159e
     path: ./proxy/mojie.yaml
@@ -220,7 +220,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
   AmyTelecom-p:
-    type: HTTP
+    type: http
     interval: 600
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     path: ./proxy/AmyTelecom.yaml
