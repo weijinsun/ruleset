@@ -1,0 +1,310 @@
+# 配置基于 https://github.com/Hackl0us/SS-Rule-Snippet 修改
+
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
+mode: rule
+# Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
+redir-port: 7892
+# Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
+tproxy-port: 7893
+# HTTP(S) and SOCKS5 server on the same port
+mixed-port: 7890
+# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
+# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: silent
+
+allow-lan: false
+
+ipv6: false
+
+external-controller: 0.0.0.0:9090
+
+# 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com )
+# 不使用通配符的域名优先级高于使用通配符的域名 (例如: foo.example.com > *.example.com > .example.com )
+# 注意: +.foo.com 的效果等同于 .foo.com 和 foo.com
+hosts:
+  '*.clash.dev': 127.0.0.1
+  '.dev': 127.0.0.1
+  'alpha.clash.dev': '::1'
+
+# DNS 服务器配置
+dns:
+  enable: true
+  listen: 127.0.0.1:8853
+  # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
+  # 仅填写 DNS 服务器的 IP 地址
+  default-nameserver:
+    - system # 使用 iOS 系统 DNS
+    - 114.114.114.114
+    - 223.5.5.5
+  # 支持 UDP / TCP / DoT / DoH 协议的 DNS 服务，可以指明具体的连接端口号。
+  # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
+  # Stash 会使用最先获得的解析记录回复 DNS 请求
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+    - https://rubyfish.cn/dns-query
+    - system # 使用 iOS 系统 DNS
+
+  # 跳过证书验证，解决部分兼容性问题 https://help.nextdns.io/t/g9hdkjz
+  skip-cert-verify: true
+
+  # 对部分域名使用单独的 DNS 服务器
+  nameserver-policy:
+    'www.baidu.com': 114.114.114.114
+    '+.internal.crop.com': system
+
+  ipv6: false
+  enhanced-mode: fake-ip #redir-host or fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  # use-hosts: true # lookup hosts and return IP record
+
+  # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - "*.*.xboxlive.com"
+    - speedtest.cros.wr.pvp.net
+
+    # from: https://github.com/Kr328/ClashForAndroid/blob/ffa559a57102ed8bc20eba41aa236a7764741bf9/core/src/main/golang/native/config/defaults.go#L10
+    # Stun Services
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+
+    # Google Voices
+    - 'lens.l.google.com'
+
+    # Nintendo Switch
+    - '*.n.n.srv.nintendo.net'
+
+    # PlayStation
+    - '+.stun.playstation.net'
+
+    # XBox
+    - 'xbox.*.*.microsoft.com'
+    - '*.*.xboxlive.com'
+
+    # Microsoft
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
+
+    # Bilibili CDN
+    - '*.mcdn.bilivideo.cn'
+
+  # When `fallback` is present, the DNS server will send concurrent requests
+  # to the servers in this section along with servers in `nameservers`.
+  # The answers from fallback servers are used when the GEOIP country
+  # is not `CN`.
+  # fallback:
+  #   - tcp://1.1.1.1
+
+  # If IP addresses resolved with servers in `nameservers` are in the specified
+  # subnets below, they are considered invalid and results from `fallback`
+  # servers are used instead.
+  #
+  # IP address resolved with servers in `nameserver` is used when
+  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
+  #
+  # If `fallback-filter.geoip` is false, results from `nameserver` nameservers
+  # are always used if not match `fallback-filter.ipcidr`.
+  #
+  # This is a countermeasure against DNS pollution attacks.
+  # fallback-filter:
+  #   geoip: true
+  #   geoip-code: CN
+  #   ipcidr:
+  #     - 240.0.0.0/4
+  #   domain:
+  #     - '+.google.com'
+  #     - '+.facebook.com'
+  #     - '+.youtube.com'
+  fallback:
+    - https://dns.rubyfish.cn/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - tls://8.8.4.4
+  fallback-filter:
+    geoip: true
+    #geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.googleapis.com
+      - +.gvt1.com
+
+
+proxy-providers:
+  mojie-p:
+    type: file
+    url: https://mojie.link/api/v1/client/subscribe?token=c12da864507d67f00aa9532f9eae159e
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  AmyTelecom-p:
+    type: file
+    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
+    path: ./node/AmyTelecom.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+proxy-groups:
+  - name: "AmyTelecom"
+    type: select
+    use:
+      - AmyTelecom-p
+  - name: "mojie"
+    type: select
+    use:
+      - mojie-p
+  - name: "Proxy"
+    type: select
+    proxies:
+      - mojie
+      - AmyTelecom
+  - name: "Apple"
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+  - name: "Final"
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+  - name: 'load-balance'
+    type: load-balance
+    proxies:
+      - Proxy
+      - DIRECT
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # 基于 SSID 的策略，方便在特殊网络环境下使用特定的代理
+#  - name: ssid-group
+#    type: select # 类型必须为 select，兼容原版 clash 配置
+#    proxies:
+#      - ss1
+#      - ss2
+#      - DIRECT
+#    ssid-policy:
+#      # 在 SSID 为 office 的 Wi-Fi 中自动切换为 ss1 策略
+#      # 在 SSID 为 home 的 Wi-Fi 中自动切换为 ss2 策略
+#      # 在蜂窝数据中自动切换为 ss3 策略
+#      # 其他的 SSID 默认为 DIRECT
+#      office: ss1
+#      home: ss2
+#      cellular: ss3
+#      default: DIRECT
+rule-providers:
+  proxy-domain:
+    behavior: domain # 使用 domain 类规则集，可以使匹配更高效
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    interval: 86400
+
+  proxy-domain-text:
+    behavior: domain-text # 推荐使用 text 格式
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt
+    interval: 86400
+
+  lan-cidr:
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    interval: 86400
+
+  ip-cidr-text:
+    behavior: ipcidr-text
+    url: https://cdn.jsdelivr.net/gh/17mon/china_ip_list@master/china_ip_list.txt
+    interval: 86400
+
+  apple-direct:
+    behavior: classical # 不推荐使用 classical 类规则集
+    url: 'https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Clash/Basic/Apple-direct.yaml'
+    interval: 3600
+
+rules:
+  - SCRIPT,quic,REJECT
+  - RULE-SET,proxy-domain,Proxy
+  - RULE-SET,apple-direct,DIRECT
+  - RULE-SET,lan-cidr,DIRECT
+  - RULE-SET,ip-cidr-text,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
