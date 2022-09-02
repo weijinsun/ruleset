@@ -49,8 +49,8 @@ dns:
 
   # 对部分域名使用单独的 DNS 服务器
   nameserver-policy:
-    '+.gozap.com': 172.16.0.24
-    '+.chouti.com': 172.16.0.24
+    '+.gozap.com': system
+    '+.chouti.com': system
 
   ipv6: false
   enhanced-mode: fake-ip #redir-host or fake-ip
