@@ -38,19 +38,17 @@ dns:
   # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
   # Stash 会使用最先获得的解析记录回复 DNS 请求
   nameserver:
-    - system # 使用 iOS 系统 DNS
+    - 172.16.0.24 # 使用 iOS 系统 DNS
     - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
     - https://rubyfish.cn/dns-query
+    - system # 使用 iOS 系统 DNS
 
 
   # 跳过证书验证，解决部分兼容性问题 https://help.nextdns.io/t/g9hdkjz
   skip-cert-verify: true
 
-  # 对部分域名使用单独的 DNS 服务器
-  nameserver-policy:
-    '+.gozap.com': system
-    '+.chouti.com': system
+
 
   ipv6: false
   enhanced-mode: fake-ip #redir-host or fake-ip
@@ -59,9 +57,6 @@ dns:
 
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
-    - "jms.gozap.com"
-    - "*.gozap.com"
-    - "*.chouti.com"
     - "*.lan"
     - stun.*.*.*
     - stun.*.*
@@ -288,29 +283,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
-  #  - name: 'load-balance'
-  #    type: load-balance
-  #    proxies:
-  #      - Proxy
-  #    url: 'http://www.gstatic.com/generate_204'
-  #    interval: 300
 
-  # 基于 SSID 的策略，方便在特殊网络环境下使用特定的代理
-#  - name: ssid-group
-#    type: select # 类型必须为 select，兼容原版 clash 配置
-#    proxies:
-#      - ss1
-#      - ss2
-#      - DIRECT
-#    ssid-policy:
-#      # 在 SSID 为 office 的 Wi-Fi 中自动切换为 ss1 策略
-#      # 在 SSID 为 home 的 Wi-Fi 中自动切换为 ss2 策略
-#      # 在蜂窝数据中自动切换为 ss3 策略
-#      # 其他的 SSID 默认为 DIRECT
-#      office: ss1
-#      home: ss2
-#      cellular: ss3
-#      default: DIRECT
 rule-providers:
   proxy-domain:
     type: http
