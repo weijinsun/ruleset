@@ -33,7 +33,6 @@ dns:
   # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
   # 仅填写 DNS 服务器的 IP 地址
   default-nameserver:
-    - system # 使用 iOS 系统 DNS
     - 114.114.114.114
     - 223.5.5.5
   # 支持 UDP / TCP / DoT / DoH 协议的 DNS 服务，可以指明具体的连接端口号。
@@ -213,7 +212,7 @@ proxy-providers:
   AmyTelecom-ALL:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     health-check:
       enable: true
@@ -222,7 +221,7 @@ proxy-providers:
   AmyTelecom-HK:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '香港'
     health-check:
@@ -232,7 +231,7 @@ proxy-providers:
   AmyTelecom-JP:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '日本'
     health-check:
@@ -242,7 +241,7 @@ proxy-providers:
   AmyTelecom-US:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '美国'
     health-check:
@@ -252,7 +251,7 @@ proxy-providers:
   AmyTelecom-TW:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '台湾'
     health-check:
@@ -262,7 +261,7 @@ proxy-providers:
   AmyTelecom-SG:
     type: http
     interval: 600
-    path: ./AmyTelecom.yaml
+    path: ./providers/AmyTelecom.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '新加坡'
     health-check:
@@ -274,11 +273,11 @@ proxy-groups:
   - name: "HK"
     type: select
     use:
-        - AmyTelecom-HK
+      - AmyTelecom-HK
   - name: "AmyTelecom"
     type: select
     use:
-        - AmyTelecom-ALL
+      - AmyTelecom-ALL
   - name: "Proxy"
     type: select
     proxies:
@@ -294,12 +293,12 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
-#  - name: 'load-balance'
-#    type: load-balance
-#    proxies:
-#      - Proxy
-#    url: 'http://www.gstatic.com/generate_204'
-#    interval: 300
+  #  - name: 'load-balance'
+  #    type: load-balance
+  #    proxies:
+  #      - Proxy
+  #    url: 'http://www.gstatic.com/generate_204'
+  #    interval: 300
 
   # 基于 SSID 的策略，方便在特殊网络环境下使用特定的代理
 #  - name: ssid-group
@@ -320,39 +319,28 @@ proxy-groups:
 rule-providers:
   proxy-domain:
     type: http
+    path: ./providers/a.txt
     behavior: domain # 使用 domain 类规则集，可以使匹配更高效
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
     interval: 86400
 
-  proxy-domain-text:
-    type: http
-    behavior: domain-text # 推荐使用 text 格式
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt
-    interval: 86400
-
   lan-cidr:
     type: http
+    path: ./providers/b.txt
     behavior: ipcidr
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
     interval: 86400
 
-  ip-cidr-text:
-    type: http
-    behavior: ipcidr-text
-    url: https://cdn.jsdelivr.net/gh/17mon/china_ip_list@master/china_ip_list.txt
-    interval: 86400
-
   apple-direct:
     type: http
+    path: ./providers/d.txt
     behavior: classical # 不推荐使用 classical 类规则集
     url: 'https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Clash/Basic/Apple-direct.yaml'
     interval: 3600
 
 rules:
-  - SCRIPT,quic,REJECT
   - RULE-SET,proxy-domain,Proxy
   - RULE-SET,apple-direct,DIRECT
   - RULE-SET,lan-cidr,DIRECT
-  - RULE-SET,ip-cidr-text,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Proxy
