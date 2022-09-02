@@ -44,7 +44,6 @@ dns:
     - 172.16.0.24 # 自建dns
     - system # 使用 iOS 系统 DNS
 
-
   # 跳过证书验证，解决部分兼容性问题 https://help.nextdns.io/t/g9hdkjz
   skip-cert-verify: true
 
@@ -208,7 +207,6 @@ dns:
       - +.googleapis.com
       - +.gvt1.com
 
-
 proxy-providers:
   AmyTelecom-ALL:
     type: http
@@ -239,14 +237,21 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
+  mojie-ALL:
+    type: file
+    path: ./mojie.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
 
 proxy-groups:
   - name: "Proxy"
     type: select
+    use:
+      - AmyTelecom-ALL
     proxies:
-      - Amy
-      - Amy-HK
-      - Amy-US
+      - mojie
 
   - name: "Amy"
     type: select
@@ -262,6 +267,11 @@ proxy-groups:
     type: select
     use:
       - AmyTelecom-US
+
+  - name: "mojie"
+    type: select
+    use:
+      - mojie-ALL
 
   - name: "Apple"
     type: select
