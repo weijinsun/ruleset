@@ -213,6 +213,7 @@ proxy-providers:
   AmyTelecom-ALL:
     type: HTTP
     interval: 600
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     health-check:
       enable: true
@@ -221,6 +222,7 @@ proxy-providers:
   AmyTelecom-HK:
     type: HTTP
     interval: 600
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '香港'
     health-check:
@@ -230,6 +232,7 @@ proxy-providers:
   AmyTelecom-JP:
     type: HTTP
     interval: 600
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '日本'
     health-check:
@@ -239,6 +242,7 @@ proxy-providers:
   AmyTelecom-US:
     type: HTTP
     interval: 600
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '美国'
     health-check:
@@ -248,6 +252,7 @@ proxy-providers:
   AmyTelecom-TW:
     type: HTTP
     interval: 600
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '台湾'
     health-check:
@@ -257,7 +262,7 @@ proxy-providers:
   AmyTelecom-SG:
     type: HTTP
     interval: 600
-    path: a.yaml
+    path:
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '新加坡'
     health-check:
