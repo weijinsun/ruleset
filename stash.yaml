@@ -266,12 +266,12 @@ proxy-providers:
 
 proxy-groups:
   - name: "HK"
-      type: select
-      use:
+    type: select
+    use:
         - AmyTelecom-HK
   - name: "AmyTelecom"
-      type: select
-      use:
+    type: select
+    use:
         - AmyTelecom-ALL
   - name: "Proxy"
     type: select
