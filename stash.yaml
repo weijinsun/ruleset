@@ -240,6 +240,7 @@ proxy-providers:
   mojie-ALL:
     type: file
     path: ./mojie.yaml
+    url: https://mojie.link/api/v1/client/subscribe?token=c12da864507d67f00aa9532f9eae159e
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
