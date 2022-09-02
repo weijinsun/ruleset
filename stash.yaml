@@ -257,6 +257,7 @@ proxy-providers:
   AmyTelecom-SG:
     type: HTTP
     interval: 600
+    path: a.yaml
     url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
     filter: '新加坡'
     health-check:
