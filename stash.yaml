@@ -228,16 +228,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
-  AmyTelecom-JP:
-    type: http
-    interval: 600
-    path: ./providers/AmyTelecom.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
-    filter: '日本'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
   AmyTelecom-US:
     type: http
     interval: 600
@@ -248,46 +238,48 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
-  AmyTelecom-TW:
-    type: http
-    interval: 600
-    path: ./providers/AmyTelecom.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
-    filter: '台湾'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
-  AmyTelecom-SG:
-    type: http
-    interval: 600
-    path: ./providers/AmyTelecom.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
-    filter: '新加坡'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
 
 proxy-groups:
-  - name: "HK"
-    type: select
-    use:
-      - AmyTelecom-HK
-  - name: "AmyTelecom"
-    type: select
-    use:
-      - AmyTelecom-ALL
   - name: "Proxy"
     type: select
     proxies:
-      - HK
-      - AmyTelecom
+      - Amy
+      - Amy-HK
+      - Amy-US
+
+  - name: "Amy"
+    type: select
+    use:
+      - AmyTelecom-ALL
+
+  - name: "Amy-HK"
+    type: select
+    use:
+      - AmyTelecom-HK
+
+  - name: "Amy-US"
+    type: select
+    use:
+      - AmyTelecom-US
+
   - name: "Apple"
     type: select
     proxies:
       - Proxy
       - DIRECT
+
+  - name: "Twitter"
+    type: select
+    proxies:
+      - Amy-US
+      - Proxy
+
+  - name: "Paypal"
+    type: select
+    proxies:
+      - Amy-US
+      - Proxy
+
   - name: "Final"
     type: select
     proxies:
