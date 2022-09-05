@@ -211,7 +211,7 @@ dns:
 
 proxy-providers:
   AmyTelecom-ALL:
-    type: http
+    type: file
     interval: 600
     path: ./AmyTelecom_Clash.yaml
     health-check:
@@ -219,7 +219,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
   AmyTelecom-US:
-    type: http
+    type: file
     interval: 600
     path: ./AmyTelecom_Clash.yaml
     filter: '美国'
