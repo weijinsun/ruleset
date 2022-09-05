@@ -234,12 +234,7 @@ rules:
   - PROCESS-NAME,NetTransport,DIRECT
   - PROCESS-NAME,uTorrent,DIRECT
   - PROCESS-NAME,WebTorrent,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,Proxy
-  - RULE-SET,direct,DIRECT
+
 
   - DOMAIN-SUFFIX,emby.nexitally.com,Proxy
   - DOMAIN-SUFFIX,ap.spotify.com,DIRECT
@@ -1588,5 +1583,13 @@ rules:
   - DOMAIN-SUFFIX,wolframalpha.com,Final
   - DOMAIN-SUFFIX,x-art.com,Final
   - DOMAIN-SUFFIX,yimg.com,Final
+  
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,proxy,Proxy
+  - RULE-SET,direct,DIRECT
+  
   - GEOIP,CN,DIRECT
   - MATCH,Final
