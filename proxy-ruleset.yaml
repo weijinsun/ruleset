@@ -1,7 +1,4 @@
 payload:
-  - DOMAIN-SUFFIX,chouti.com,DIRECT
-  - DOMAIN-SUFFIX,gozap.com,DIRECT
-  - DOMAIN-SUFFIX,svj.com,DIRECT
   - DOMAIN-SUFFIX,traefik.io,Proxy
   - DOMAIN-SUFFIX,kubernetes.io,Proxy
   - DOMAIN-SUFFIX,github.com,Proxy
