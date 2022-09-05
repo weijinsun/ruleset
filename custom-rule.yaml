@@ -1,0 +1,27 @@
+payload:
+  - DOMAIN-SUFFIX,chouti.com,DIRECT
+  - DOMAIN-SUFFIX,gozap.com,DIRECT
+  - DOMAIN-SUFFIX,svj.com,DIRECT
+  - DOMAIN-SUFFIX,traefik.io,Proxy
+  - DOMAIN-SUFFIX,kubernetes.io,Proxy
+  - DOMAIN-SUFFIX,github.com,Proxy
+  - DOMAIN-SUFFIX,githubusercontent.com,Proxy
+  - DOMAIN-SUFFIX,git.huiyoujia.com,Proxy
+  - DOMAIN-SUFFIX,vipgame.io,Proxy
+  - DOMAIN-SUFFIX,ruanyifeng.com,Proxy
+  - DOMAIN-SUFFIX,amysecure.com,Proxy
+  - DOMAIN-SUFFIX,openvpn.net,Proxy
+  - DOMAIN-SUFFIX,daum.net,Proxy
+  - DOMAIN-SUFFIX,dropbox.com,Proxy
+  - DOMAIN-SUFFIX,v2ex.com,Proxy
+  - DOMAIN-SUFFIX,dropboxstatic.com,Proxy
+  - DOMAIN-SUFFIX,dropboxapi.com,Proxy
+  - DOMAIN-SUFFIX,pstmn.io,Proxy
+  - DOMAIN-SUFFIX,postman.com,Proxy
+  - DOMAIN-SUFFIX,redisson.org,Proxy
+  - DOMAIN-SUFFIX,g.co,Proxy
+  - DOMAIN-SUFFIX,jsfiddle.net,Proxy
+  - DOMAIN-SUFFIX,fiddle.jshell.net,Proxy
+  - DOMAIN-SUFFIX,netsarang.com,Proxy
+  - DOMAIN-SUFFIX,appcenter.ms,Proxy
+  - IP-CIDR,103.121.165.0/24,Proxy
