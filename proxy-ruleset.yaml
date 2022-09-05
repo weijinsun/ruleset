@@ -21,4 +21,3 @@ payload:
   - DOMAIN-SUFFIX,fiddle.jshell.net
   - DOMAIN-SUFFIX,netsarang.com
   - DOMAIN-SUFFIX,appcenter.ms
-  - IP-CIDR,103.121.165.0/24
