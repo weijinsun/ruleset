@@ -1,5 +1,5 @@
 payload:
-  - DOMAIN-SUFFIX,chouti.com,DIRECT
-  - DOMAIN-SUFFIX,gozap.com,DIRECT
-  - DOMAIN-SUFFIX,svj.com,DIRECT
+  - DOMAIN-SUFFIX,chouti.com
+  - DOMAIN-SUFFIX,gozap.com
+  - DOMAIN-SUFFIX,svj.com
 
