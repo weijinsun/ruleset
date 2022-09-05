@@ -247,21 +247,22 @@ dns:
     - https://public.dns.iij.jp/dns-query
     - tls://8.8.4.4
  
-rule-providers:
-	custom-proxy:
-		type: http
-		behavior: classical
-		path: ./proxy-ruleset.yaml
-		url: https://raw.githubusercontent.com/weijinsun/ruleset/main/proxy-ruleset.yaml
-		interval: 3600
 
 rule-providers:
-	custom-direct:
-		type: http
-		behavior: classical
-		path: ./proxy-ruleset.yaml
-		url: https://raw.githubusercontent.com/weijinsun/ruleset/main/direct-ruleset.yaml
-		interval: 3600
+  custom-proxy:
+    type: http
+    behavior: classical
+    path: ./proxy-ruleset.yaml
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/proxy-ruleset.yaml
+    interval: 3600
+
+rule-providers:
+  custom-direct:
+    type: http
+    behavior: classical
+    path: ./proxy-ruleset.yaml
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/direct-ruleset.yaml
+    interval: 3600
 
 RULE-SET,custom-proxy,Proxy
 RULE-SET,custom-direct,DIRECT
