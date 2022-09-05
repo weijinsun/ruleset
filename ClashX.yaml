@@ -260,7 +260,7 @@ rule-providers:
   custom-direct:
     type: http
     behavior: classical
-    path: ./proxy-ruleset.yaml
+    path: ./direct-ruleset.yaml
     url: https://raw.githubusercontent.com/weijinsun/ruleset/main/direct-ruleset.yaml
     interval: 3600
 
