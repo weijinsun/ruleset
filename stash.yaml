@@ -214,7 +214,6 @@ proxy-providers:
     type: http
     interval: 600
     path: ./AmyTelecom_Clash.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=uZO3yDq7Dsh
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -223,7 +222,6 @@ proxy-providers:
     type: http
     interval: 600
     path: ./AmyTelecom_Clash.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=uZO3yDq7Dsh
     filter: '美国'
     health-check:
       enable: true
