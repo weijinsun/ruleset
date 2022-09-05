@@ -248,6 +248,7 @@ dns:
     - tls://8.8.4.4
  
 
+
 rule-providers:
   custom-proxy:
     type: http
@@ -256,7 +257,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/weijinsun/ruleset/main/proxy-ruleset.yaml
     interval: 3600
 
-rule-providers:
   custom-direct:
     type: http
     behavior: classical
@@ -264,10 +264,9 @@ rule-providers:
     url: https://raw.githubusercontent.com/weijinsun/ruleset/main/direct-ruleset.yaml
     interval: 3600
 
-RULE-SET,custom-proxy,Proxy
-RULE-SET,custom-direct,DIRECT
-
 rules:
+  - RULE-SET,custom-proxy,Proxy
+  - RULE-SET,custom-direct,DIRECT
   - DOMAIN-SUFFIX,acl4.ssr,DIRECT
   - DOMAIN-SUFFIX,ip6-localhost,DIRECT
   - DOMAIN-SUFFIX,ip6-loopback,DIRECT
