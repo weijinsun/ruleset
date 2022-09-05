@@ -92,6 +92,7 @@ proxy-groups:
 
   - name: "Final"
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
       - DIRECT
       - Proxy
