@@ -223,7 +223,7 @@ proxy-providers:
     type: http
     interval: 600
     path: ./providers/AmyTelecom.yaml
-    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=eltga8wFOTk
+    url: https://api.nxtlnodes.com/Subscription/Clash?sid=22990&token=uZO3yDq7Dsh
     filter: '美国'
     health-check:
       enable: true
@@ -233,6 +233,7 @@ proxy-providers:
 proxy-groups:
   - name: "Proxy"
     type: select
+    filter: '美国'
     use:
       - AmyTelecom-ALL
 
