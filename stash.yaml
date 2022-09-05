@@ -233,7 +233,6 @@ proxy-providers:
 proxy-groups:
   - name: "Proxy"
     type: select
-    filter: '美国'
     use:
       - AmyTelecom-ALL
 
