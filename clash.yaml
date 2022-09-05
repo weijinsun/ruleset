@@ -18,7 +18,7 @@ proxy-providers:
   Amy-HK:
     type: file
     path: ./proxies/Amy.yaml
-    filter: ’香港‘
+    filter: '香港'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -27,7 +27,7 @@ proxy-providers:
   Amy-US:
     type: file
     path: ./proxies/Amy.yaml
-    filter: ’美国‘
+    filter: '美国'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -44,7 +44,7 @@ proxy-providers:
   MoJie-HK:
     type: file
     path: ./proxies/MoJie.yaml
-    filter: ’香港‘
+    filter: '香港'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -53,7 +53,7 @@ proxy-providers:
   MoJie-US:
     type: file
     path: ./proxies/MoJie.yaml
-    filter: ’美国‘
+    filter: '美国'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
