@@ -4525,7 +4525,7 @@ rules:
   - DOMAIN-SUFFIX,gigporno.ru,Proxy
   - DOMAIN-SUFFIX,girlbanker.com,Proxy
   - DOMAIN-SUFFIX,git.io,Proxy
-  - DOMAIN-SUFFIX,gitbooks.io,Proxy
+  - DOMAIN-SUFFIX,gitbook.io,Proxy
   - DOMAIN-SUFFIX,githack.com,Proxy
   - DOMAIN-SUFFIX,github.blog,Proxy
   - DOMAIN-SUFFIX,github.com,Proxy
