@@ -7,6 +7,7 @@ payload:
   - DOMAIN-SUFFIX,vipgame.io
   - DOMAIN-SUFFIX,ruanyifeng.com
   - DOMAIN-SUFFIX,amysecure.com
+  - DOMAIN-SUFFIX,nxtlnodes.com
   - DOMAIN-SUFFIX,openvpn.net
   - DOMAIN-SUFFIX,daum.net
   - DOMAIN-SUFFIX,dropbox.com
@@ -22,3 +23,6 @@ payload:
   - DOMAIN-SUFFIX,netsarang.com
   - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,stash.wiki
+  - DOMAIN-SUFFIX,mojie.me
+  - DOMAIN-SUFFIX,mojie.online
+  
