@@ -1,4 +1,3 @@
-#SUBSCRIBED https://raw.githubusercontent.com/VirgilClyne/iRingo/main/stoverride/Weather.stoverride
 name: AAAA
 desc: AAAAAAAAA
 
@@ -7,10 +6,10 @@ tiles:
     interval: 600
     title: 'Awesome AAA'
     content: 'This is Super Cool'
-    icon: 'theatermasks.circle.fill'
+    # icon: 'theatermasks.circle.fill'
     backgroundColor: '#663399'
 
 script-providers:
   AAA:
-    url: https://your-fancy-script.com/your-fancy-script.js
+    url: https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.js
     interval: 86400
