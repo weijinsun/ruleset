@@ -15,5 +15,5 @@ tiles:
 
 script-providers:
   Test:
-    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test.js
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test1.js
     interval: 60
