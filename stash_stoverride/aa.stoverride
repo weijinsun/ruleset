@@ -1,0 +1,16 @@
+#SUBSCRIBED https://raw.githubusercontent.com/VirgilClyne/iRingo/main/stoverride/Weather.stoverride
+name: AAAA
+desc: AAAAAAAAA
+
+titles:
+  - name: AAA
+    interval: 600
+    title: 'Awesome AAA'
+    content: 'This is Super Cool'
+    icon: 'theatermasks.circle.fill'
+    backgroundColor: '#663399'
+
+script-providers:
+  AAA:
+    url: https://your-fancy-script.com/your-fancy-script.js
+    interval: 86400
