@@ -3,7 +3,7 @@ desc: test tile
 
 http:
   mitm:
-    - '*.my-ip.io'
+    - '*.baidu.com'
 
 tiles:
   - name: Test
@@ -15,5 +15,5 @@ tiles:
 
 script-providers:
   Test:
-    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test1.js
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test2.js
     interval: 60
