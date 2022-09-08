@@ -1,4 +1,4 @@
-$httpClient.get("https://baidu.com", function (error, response, data) {
+$httpClient.get("https://api.my-ip.io/ip", function (error, response, data) {
     $done({
         title: "test",
         content: data,
