@@ -14,6 +14,6 @@ tiles:
     backgroundColor: '#663399'
 
 script-providers:
-  AAA:
+  Test:
     url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test.js
     interval: 60
