@@ -1,0 +1,19 @@
+name: Test
+desc: test tile
+
+http:
+  mitm:
+    - '*.my-ip.io'
+
+tiles:
+  - name: Test
+    interval: 60
+    title: 'Test 1111'
+    content: '@@@@@@@@@@'
+    icon: 'target'
+    backgroundColor: '#663399'
+
+script-providers:
+  Test:
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test.js
+    interval: 60
