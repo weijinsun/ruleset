@@ -1,15 +1,15 @@
-name: AAAA
-desc: AAAAAAAAA
+name: Test
+desc: test tile
 
 tiles:
-  - name: AAA
+  - name: Test
     interval: 600
-    title: 'Awesome AAA'
+    title: 'Test 1111'
     content: 'This is Super Cool'
-    # icon: 'theatermasks.circle.fill'
+    icon: 'theatermasks.circle.fill'
     backgroundColor: '#663399'
 
 script-providers:
   AAA:
-    url: https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.js
+    url: https://raw.githubusercontent.com/weijinsun/ruleset/main/stash_stoverride/test.js
     interval: 86400
