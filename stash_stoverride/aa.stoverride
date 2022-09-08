@@ -2,7 +2,7 @@
 name: AAAA
 desc: AAAAAAAAA
 
-titles:
+tiles:
   - name: AAA
     interval: 600
     title: 'Awesome AAA'
