@@ -49,14 +49,14 @@ proxy-groups:
 
   - name: "JP"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
     filter: '日本'
     use:
       - Amy-All
 
   - name: "TW"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
     filter: '台湾'
     use:
       - Amy-All
