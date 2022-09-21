@@ -33,12 +33,44 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
 
+  Amy-SG:
+    type: file
+    path: ./Amy.yaml
+    filter: '新加坡'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+  Amy-JP:
+    type: file
+    path: ./Amy.yaml
+    filter: '日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+
+  Amy-TW:
+    type: file
+    path: ./Amy.yaml
+    filter: '台湾'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
 proxy-groups:
   - name: "Proxy"
     type: select
-    use:
-      - Amy-All
-
+    proxies:
+      - HK
+      - SG
+      - US
+      - JP
+      - TW
+      
   - name: "HK"
     type: select
     use:
@@ -48,6 +80,21 @@ proxy-groups:
     type: select
     use:
       - Amy-US
+
+  - name: "SG"
+    type: select
+    use:
+      - Amy-SG
+ 
+   - name: "JP"
+    type: select
+    use:
+      - Amy-JP
+ 
+   - name: "TW"
+    type: select
+    use:
+      - Amy-TW
 
   - name: "Twitter"
     type: select
