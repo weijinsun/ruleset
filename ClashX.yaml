@@ -86,12 +86,12 @@ proxy-groups:
     use:
       - Amy-SG
  
-   - name: "JP"
+  - name: "JP"
     type: select
     use:
       - Amy-JP
  
-   - name: "TW"
+  - name: "TW"
     type: select
     use:
       - Amy-TW
