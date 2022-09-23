@@ -142,9 +142,9 @@ dns:
   # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
   # Stash 会使用最先获得的解析记录回复 DNS 请求
   nameserver:
-    - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
     - https://rubyfish.cn/dns-query
+    - https://dns.alidns.com/dns-query
     - 172.16.0.24 # 自建dns
     - system # 使用 iOS 系统 DNS
 
