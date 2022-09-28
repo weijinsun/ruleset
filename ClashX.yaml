@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: silent
 ipv6: false
-external-controller: 0.0.0.0:9090
+external-controller: 0.0.0.0:9099
 
 proxy-providers:
   Amy-All:
