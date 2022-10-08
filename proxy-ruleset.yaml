@@ -21,6 +21,8 @@ payload:
   - DOMAIN-SUFFIX,jsfiddle.net
   - DOMAIN-SUFFIX,fiddle.jshell.net
   - DOMAIN-SUFFIX,netsarang.com
+  - DOMAIN-SUFFIX,a889.site.com
+  - DOMAIN-SUFFIX,xbookcn.net
   - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,stash.wiki
   - DOMAIN-SUFFIX,mojie.me
