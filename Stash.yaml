@@ -95,7 +95,7 @@ proxy-groups:
 
   - name: "Apple"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_2.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple.png
     proxies:
       - DIRECT
       - Proxy
