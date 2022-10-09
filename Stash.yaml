@@ -50,7 +50,7 @@ proxy-groups:
 
   - name: "JP"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Japan.png
     filter: '日本'
     use:
       - Amy-All
