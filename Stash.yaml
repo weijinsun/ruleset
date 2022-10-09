@@ -19,7 +19,7 @@ proxy-providers:
 proxy-groups:
   - name: "Proxy"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Proxy.png
     proxies:
       - HK
       - SG
@@ -29,21 +29,21 @@ proxy-groups:
 
   - name: "HK"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Hong_Kong.png
     filter: '香港'
     use:
       - Amy-All
 
   - name: "US"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/United_States.png
     filter: '美国'
     use:
       - Amy-All
 
   - name: "SG"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Singapore.png
     filter: '新加坡'
     use:
       - Amy-All
@@ -57,14 +57,14 @@ proxy-groups:
 
   - name: "TW"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Taiwan.png
     filter: '台湾'
     use:
       - Amy-All
 
   - name: "Twitter"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Twitter.png
     proxies:
       - US
       - HK
@@ -72,7 +72,7 @@ proxy-groups:
 
   - name: "PayPal"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/PayPal.png
     proxies:
       - US
       - Proxy
@@ -80,14 +80,14 @@ proxy-groups:
 
   - name: "Youtube"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YouTube.png
     proxies:
       - HK
       - Proxy
 
   - name: "Telegram"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Telegram.png
     proxies:
       - HK
       - US
@@ -95,14 +95,14 @@ proxy-groups:
 
   - name: "Apple"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple_2.png
     proxies:
       - DIRECT
       - Proxy
 
   - name: "Netflix"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Netflix.png
     proxies:
       - HK
       - US
@@ -110,7 +110,7 @@ proxy-groups:
 
   - name: "Microsoft"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Microsoft.png
     proxies:
       - DIRECT
       - HK
@@ -118,7 +118,7 @@ proxy-groups:
 
   - name: "Final"
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Final.png
     proxies:
       - DIRECT
       - Proxy
